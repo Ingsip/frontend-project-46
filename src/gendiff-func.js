@@ -1,11 +1,45 @@
-import { Command } from 'commander';
-const program = new Command();
-program
-  .version('0.0.1', '-V, --version', 'output the version number')
-  .option('-f, --format [type]', 'output format')
-  .description('Compares two configuration files and shows a difference.')
-  .argument('<filepath1> <filepath2>');
+/*const sum = (a, b) => {
+	return a + b;
+}
+export default sum;*/
 
-program.parse(process.argv);
+import path from "path";
+import fs from "fs";
+import parse from "./parse.js";
+import buildTree from "./buildTree.js"
 
-export default program;
+const getFullPath = (filePath) => {
+	return path.resolve(process.cwd(), filePath)
+}
+
+const extractFormat = (filePath) => {
+	return path.extname(filePath).slice(1);
+}
+
+const getData = (filePath) => {
+	return parse(fs.readFileSync(filePath, ('utf-8')), extractFormat(filePath));
+}
+
+const genDiff = (filepath1, filepath2) => {
+	//console.log(filepath1, filepath2);
+	//console.log(process.cwd())
+	const fullFilePath1 = getFullPath(filepath1);
+	const fullFilePath2 = getFullPath(filepath2);
+
+	//console.log('fullFilePath1', fullFilePath1);
+	//console.log('fullFilePath2', fullFilePath2);
+
+	//console.log(JSON.parse(fs.readFileSync(fullFilePath1, 'utf-8')));
+	//console.log(JSON.parse(fs.readFileSync(fullFilePath2, 'utf-8')));
+	const data1 = getData(fullFilePath1);
+	const data2 = getData(fullFilePath2);
+
+	const tree = buildTree(data1, data2);
+
+	console.log('data1', data1)
+	console.log('data2',data2)
+	//console.log('tree', tree)
+
+};
+
+export default genDiff;

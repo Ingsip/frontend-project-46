@@ -1,3 +1,7 @@
-import program from "./src/gendiff-func.js";
+import genDiff from "./src/gendiff-func.js";
 
-export default program;
+export default genDiff;
+
+/*import sum from "./src/gendiff-func.js";
+
+export default sum;*/
