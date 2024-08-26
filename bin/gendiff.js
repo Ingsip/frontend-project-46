@@ -2,7 +2,7 @@
 import genDiff from "../index.js";
 
 import { Command } from 'commander';
-import parse from "../src/parse.js";
+import parser from "../src/parse.js";
 const program = new Command();
 program
   .version('0.0.1', '-V, --version', 'output the version number')

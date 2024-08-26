@@ -5,19 +5,20 @@ export default sum;*/
 
 import path from "path";
 import fs from "fs";
-import parse from "./parse.js";
+import parser from "./parse.js";
 import buildTree from "./buildTree.js"
 
 const getFullPath = (filePath) => {
 	return path.resolve(process.cwd(), filePath)
 }
 
+//формат расширения
 const extractFormat = (filePath) => {
 	return path.extname(filePath).slice(1);
 }
 
 const getData = (filePath) => {
-	return parse(fs.readFileSync(filePath, ('utf-8')), extractFormat(filePath));
+	return parser(fs.readFileSync(filePath, ('utf-8')), extractFormat(filePath));
 }
 
 const genDiff = (filepath1, filepath2) => {
@@ -36,10 +37,9 @@ const genDiff = (filepath1, filepath2) => {
 
 	const tree = buildTree(data1, data2);
 
-	console.log('data1', data1)
-	console.log('data2',data2)
-	//console.log('tree', tree)
-
+	//console.log('data1', data1)
+	//console.log('data2',data2)
+	console.log('tree', tree)
 };
 
 export default genDiff;
