@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import genDiff from "../index.js";
+import genDiff from "../src/index.js";
+import parser from "../src/parsers.js";
 
 import { Command } from 'commander';
-import parser from "../src/parse.js";
 const program = new Command();
 program
   .version('0.0.1', '-V, --version', 'output the version number')

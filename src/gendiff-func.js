@@ -5,7 +5,7 @@ export default sum;*/
 
 import path from "path";
 import fs from "fs";
-import parser from "./parse.js";
+import parser from "./parsers.js";
 import buildTree from "./buildTree.js"
 
 const getFullPath = (filePath) => {
@@ -39,7 +39,7 @@ const genDiff = (filepath1, filepath2) => {
 
 	//console.log('data1', data1)
 	//console.log('data2',data2)
-	console.log('tree', tree)
+	console.log(tree)
 };
 
 export default genDiff;
