@@ -36,10 +36,11 @@ const genDiff = (filepath1, filepath2) => {
 
   const tree = buildTree(data1, data2);
 
-  console.log(tree);
+  // console.log(tree);
 
   // console.log('data1', data1)
   // console.log('data2',data2)
+  return tree;
 };
 
 export default genDiff;

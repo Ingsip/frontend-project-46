@@ -8,13 +8,13 @@ program
   .version('0.0.1', '-V, --version', 'output the version number')
   .option('-f, --format <type>', 'output format')
   .description('Compares two configuration files and shows a difference.')
-  .argument('<filepath1> <filepath2>');
-/* .action((filepath1, filepath2) => {
-    console.log(genDiff(filepath1, filepath2));
-  }); */
+  .argument('<filepath1> <filepath2>')
+  .action((filepath1, filepath2) => {
+    console.log(genDiff(filepath1, filepath2, program.opts().format));
+  });
 program.parse();
 
-genDiff('__fixtures__/file1.json', '__fixtures__/file2.json');
+// genDiff('__fixtures__/file1.json', '__fixtures__/file2.json');
 
 /* import sum from "../src/parsers.js";
 
