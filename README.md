@@ -11,7 +11,7 @@
 ##### Запуск сравнения
 
 ```
-$ gendiff filepath1.json filepath2.json
+$ gendiff __fixtures__/file1.json __fixtures__/file2.json
 ```
 
-##### Демонстрация: [Сравнение плоских файлов (JSON)](https://asciinema.org/a/8Igw18aeJ2by9WDUKp9KzfAFa)
+##### Демонстрация: [Сравнение плоских файлов (JSON)](https://asciinema.org/a/ttMDA735LWS87RvyUCMBGoWJv)

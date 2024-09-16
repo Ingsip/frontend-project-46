@@ -24,7 +24,8 @@ const buildTree = (data1, data2) => {
       type: 'changed',
     };
   });
-  const newDiff = diff.map((item) => {
+  return diff;
+  /*  const newDiff = diff.map((item) => {
     if (item.type === 'deleted') {
       return `- ${item.key}: ${item.value}`;
     } if (item.type === 'unchanged') {
@@ -35,6 +36,9 @@ const buildTree = (data1, data2) => {
       return `- ${item.key}: ${item.value1}\n+ ${item.key}: ${item.value2}`;
     }
   });
-  return newDiff.join('\n');
+  return `{\n${newDiff.join('\n')}\n}`; */
+
+  /* const formatJson = (diff) => JSON.stringify(diff, null, 2);
+  return formatJson; */
 };
 export default buildTree;

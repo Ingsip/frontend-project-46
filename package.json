@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "description": "[![Actions Status](https://github.com/Ingsip/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Ingsip/frontend-project-46/actions)",
-  "main": "src/gendiff-func.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "jest"
+    "test": "npx jest"
   },
   "author": "",
   "license": "ISC",
