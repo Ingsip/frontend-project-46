@@ -15,3 +15,13 @@ $ gendiff __fixtures__/file1.json __fixtures__/file2.json
 ```
 
 ##### Демонстрация: [Сравнение плоских файлов (JSON)](https://asciinema.org/a/ttMDA735LWS87RvyUCMBGoWJv)
+
+### Сравнение плоских файлов (yaml)
+
+##### Запуск сравнения
+
+```
+$ gendiff __fixtures__/file1.yaml __fixtures__/file2.yaml
+```
+
+##### Демонстрация: [Сравнение плоских файлов (yaml)](https://asciinema.org/a/n8k2vFdPI9W6g3ZyHxjOk3X8A)
