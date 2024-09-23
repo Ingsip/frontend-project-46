@@ -28,6 +28,8 @@ const stylish = (data) => {
           return `${getIndent(depth)}  ${diff.key}: ${stringify(diff.value, depth)}`;
         case 'changed':
           return `${getIndent(depth)}- ${diff.key}: ${stringify(diff.value1, depth)}\n${getIndent(depth)}+ ${diff.key}: ${stringify(diff.value2, depth)}`;
+        case 'nested':
+          return `${getIndent(depth)}  ${diff.key}: {\n${iter(diff.children, depth + 1)}\n${getIndent(depth)}  }`;
         default:
           throw new Error(`Unknown type of data: ${diff.type}`);
       }
@@ -37,15 +39,3 @@ const stylish = (data) => {
   return `{\n${iter(data)}\n}`;
 };
 export default stylish;
-/* const newDiff = diff.map((item) => {
-  if (item.type === 'deleted') {
-    return `- ${item.key}: ${item.value}`;
-  } if (item.type === 'unchanged') {
-    return `${item.key}: ${item.value}`;
-  } if (item.type === 'added') {
-    return `+ ${item.key}: ${item.value}`;
-  } if (item.type === 'changed') {
-    return `- ${item.key}: ${item.value1}\n+ ${item.key}: ${item.value2}`;
-  }
-});
-return `{\n${newDiff.join('\n')}\n}`; */

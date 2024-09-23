@@ -15,9 +15,3 @@ program
     console.log(genDiff(filepath1, filepath2, program.opts().format));
   });
 program.parse();
-
-// genDiff('__fixtures__/file1.json', '__fixtures__/file2.json');
-
-/* import sum from "../src/parsers.js";
-
-console.log(sum(1, 2)); */

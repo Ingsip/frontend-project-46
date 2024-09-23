@@ -25,3 +25,33 @@ $ gendiff __fixtures__/file1.yaml __fixtures__/file2.yaml
 ```
 
 ##### Демонстрация: [Сравнение плоских файлов (yaml)](https://asciinema.org/a/n8k2vFdPI9W6g3ZyHxjOk3X8A)
+
+### Вывод в формате stylish
+
+##### Запуск вывода в формате stylish
+
+```
+$ gendiff __fixtures__/file1.json __fixtures__/file2.json
+```
+
+##### Демонстрация: [Рекурсивное сравнение](https://asciinema.org/a/e6BWOOVz4muyvdRwV4BITsTFG)
+
+### Вывод в формате plain
+
+##### Запуск вывода в формате plain
+
+```
+$ gendiff --format plain  __fixtures__/file1.json __fixtures__/file2.json
+```
+
+##### Демонстрация: [Вывод в формате plain](https://asciinema.org/a/zF2nDMDSpsjV2mJYwgjDa7L9h)
+
+### Вывод в формате json
+
+##### Запуск вывода в формате plain
+
+```
+$ gendiff --format json  __fixtures__/file1.json __fixtures__/file2.json
+```
+
+##### Демонстрация: [Вывод в формате plain](https://asciinema.org/a/wIkK7I23SaVt7tXojzCxtHEMn)

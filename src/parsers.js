@@ -14,8 +14,3 @@ const parser = (data, format) => {
 };
 
 export default parser;
-
-/* const sum = (a, b) => {
-return a + b;
-}
-export default sum; */
