@@ -34,7 +34,7 @@ $ gendiff __fixtures__/file1.yaml __fixtures__/file2.yaml
 $ gendiff __fixtures__/file1.json __fixtures__/file2.json
 ```
 
-##### Демонстрация: [Рекурсивное сравнение](https://asciinema.org/a/e6BWOOVz4muyvdRwV4BITsTFG)
+##### Демонстрация: [Вывод в формате stylish](https://asciinema.org/a/e6BWOOVz4muyvdRwV4BITsTFG)
 
 ### Вывод в формате plain
 
@@ -48,10 +48,10 @@ $ gendiff --format plain  __fixtures__/file1.json __fixtures__/file2.json
 
 ### Вывод в формате json
 
-##### Запуск вывода в формате plain
+##### Запуск вывода в формате json
 
 ```
 $ gendiff --format json  __fixtures__/file1.json __fixtures__/file2.json
 ```
 
-##### Демонстрация: [Вывод в формате plain](https://asciinema.org/a/wIkK7I23SaVt7tXojzCxtHEMn)
+##### Демонстрация: [Вывод в формате json](https://asciinema.org/a/wIkK7I23SaVt7tXojzCxtHEMn)
